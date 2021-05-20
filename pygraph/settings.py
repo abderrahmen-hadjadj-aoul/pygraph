@@ -25,7 +25,7 @@ SECRET_KEY = '%_y0-g_=s-p!i(tcv6)63a=l(f_b=o^o9^=k6=6y2al4&1wvs5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["pygraph.hadjadjaoul.com"]
 
 
 # Application definition
@@ -119,3 +119,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static/'
