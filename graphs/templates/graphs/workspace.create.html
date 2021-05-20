@@ -1,0 +1,25 @@
+{% extends "graphs/layout.html" %}
+
+{% block title %}Create workspaces{% endblock %}
+
+{% block content %}
+<h1>Create workspaces</h1>
+
+<form class="pure-form pure-form-stacked" action="" method="post" accept-charset="utf-8">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Create workspace</legend>
+    <label for="name">Name</label>
+    <input type="text" placeholder="Name" name="name" id="name"/>
+    <label for="description">Description</label>
+    <input type="text" placeholder="Description" name="description" id="description"/>
+    <button class="button-success pure-button">Create workspace</button>
+  </fieldset>
+</form>
+
+<style type="text/css" media="screen">
+table {
+  margin-top: 20px;
+}
+</style>
+{% endblock %}

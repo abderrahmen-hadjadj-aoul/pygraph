@@ -1,0 +1,31 @@
+{% extends "graphs/layout.html" %}
+
+{% block title %}Workspaces{% endblock %}
+
+{% block content %}
+<h1>Workspaces</h1>
+<a href="{% url 'workspace_create' %}" class="button-success pure-button">Create workspace</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Workspace</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for workspace in workspaces %}
+    <tr>
+      <td>{{ workspace.name }}</td>
+      <td>{{ workspace.created_at }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<style type="text/css" media="screen">
+table {
+  margin-top: 20px;
+}
+</style>
+{% endblock %}
